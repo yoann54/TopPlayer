@@ -1,4 +1,5 @@
 <template name="liste">
-    {{merci}}
-    {{title}}
-</template>
+    {{#each joueur}}
+      {{name}} a {{score}} points.<br>
+    {{/each}}
+  </template>
