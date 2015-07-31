@@ -1,18 +1,24 @@
 <template name="liste">
-  <table class="table table-hover table-bordered">
-    <thead>
-      <tr>
-        <th>Nom du joueur</th>
-        <th class="text-center">SCORE</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each joueur}}
-      <tr>
-        <td class="info choisi {{classClick}}">{{name}}</td>
-        <td class="danger text-center">{{score}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>  
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Nom du joueur</th>
+                <th class="text-center">SCORE</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each joueur}}
+            <tr>
+                <td class="info choisi {{classClick}}">{{name}}</td>
+                <td class="danger text-center">{{score}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="well center-block" style="max-width: 400px;">
+
+        <input type="button" class=" btn btn-warning btn-lg btn-block increment" value="Vote pour ce joueur !">
+
+        <input type="button" class=" btn btn-info btn-lg btn-block decrement" value="Retire ton vote pour ce joueur !">
+    </div>
 </template>
