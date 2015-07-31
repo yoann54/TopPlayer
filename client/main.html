@@ -2,18 +2,19 @@
     <title>Top Tennis Players</title>
 </head>
 
+<template name="home">
 <body class="container">
 
     <header class="row">
 
-    <div class="col-xs-2 col-md-1" style="line-height:6em;">
-         LOGIN
-    </div>
-    <div class="col-xs-10 col-md-11">
-          <h1><i class="fa fa-thumbs-o-up fa-4"> Top Tennis Players</i></h1>
-    </div>
+        <div class="col-xs-2 col-md-1" style="line-height:6em;">
+          {{> navigation}}
+        </div>
+        <div class="col-xs-10 col-md-11">
+            <h1><i class="fa fa-thumbs-o-up fa-4"> Top Tennis Players</i></h1>
+        </div>
 
-</header>
+    </header>
 
     <main>
         <section>
@@ -24,4 +25,6 @@
             {{> ajoutJoueur}}
         </section>
     </main>
+  
 </body>
+</template>

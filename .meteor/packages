@@ -10,3 +10,4 @@ insecure
 twbs:bootstrap
 fortawesome:fontawesome
 accounts-password
+iron:router
