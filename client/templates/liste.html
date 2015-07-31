@@ -1,5 +1,18 @@
 <template name="liste">
-    {{#each joueur}}
-      {{name}} a {{score}} points.<br>
-    {{/each}}
-  </template>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Nom du joueur</th>
+        <th class="text-center">SCORE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each joueur}}
+      <tr>
+        <td class="info choisi {{classClick}}">{{name}}</td>
+        <td class="danger text-center">{{score}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>  
+</template>
