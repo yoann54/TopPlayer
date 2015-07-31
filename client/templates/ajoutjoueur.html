@@ -2,6 +2,7 @@
 
     <div class="well center-block" style="max-width: 400px;">
         <div class="row">
+            {{#if currentUser}}
             <form class="form-inline">
                 <div class="col-xs-8 col-lg-8">
                     <input type="text" name="nomJoueur" class="form-control" placeholder="nom du joueur">
@@ -10,7 +11,13 @@
                     <button type="submit" class="btn btn-primary">Ajouter</button>
                 </div>
             </form>
+            {{else}}
+            <div class="col-xs-12 col-lg-12">
+            <blockquote>Vous devez être connecté pour accéder aux fonctions avancées de l'application.</blockquote>
+            </div>
+            {{/if}}
+            
         </div>
     </div>
-    
+
 </template>

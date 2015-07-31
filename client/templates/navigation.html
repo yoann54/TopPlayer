@@ -6,9 +6,13 @@
     <span class="caret"></span>
   </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="{{pathFor route='register'}}">Register</a></li>
-        <li><a href="{{pathFor route='login'}}">Login</a></li>
+    {{#if currentUser}}
+        <li><a href="#" class="logout">Se déconnecter</a></li>
+    {{else}}
+        <li><a href="{{pathFor route='register'}}">S'enregistrer</a></li>
+        <li><a href="{{pathFor route='login'}}">Se connecter</a></li>
+    {{/if}}
     </ul>
 </div>
-   
+
 </template>

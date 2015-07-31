@@ -1,6 +1,7 @@
 Template.liste.helpers({
     'joueur': function () {
-        return joueursListe.find({}, {sort: {score:-1, name:1}});
+        var utilisateurActuelId = Meteor.userId();
+        return joueursListe.find({utilisateurId: utilisateurActuelId}, {sort: {score:-1, name:1}});
     },
     'classClick': function () {
         var joueurId = this._id;

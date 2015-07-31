@@ -19,8 +19,9 @@
 
         <input type="button" class=" btn btn-warning btn-lg btn-block increment" value="Vote pour ce joueur !">
 
-        <input type="button" class=" btn btn-info btn-lg btn-block decrement" value="Retire ton vote pour ce joueur !">
-        
-        <input type="button" class=" btn btn-lg btn-block supprimer" value="supprime ce joueur ! (définitif)">
+        <input type="button" class=" btn btn-info btn-lg btn-block decrement" value="Retire ton vote pour ce joueur !"> 
+        {{#if currentUser}}
+        <input type="button" class=" btn  btn-lg btn-block supprimer" value="supprime ce joueur ! (définitif)"> 
+        {{/if}}
     </div>
 </template>
