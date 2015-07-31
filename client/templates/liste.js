@@ -18,14 +18,14 @@ Template.liste.events({
     },
     'click .increment': function () {
         var joueurChoisi = Session.get('joueurChoisi');
-        joueursListe.update(joueurChoisi, {$inc: {score: 1}});
+        Meteor.call('ajoutPointJoueur', joueurChoisi);
     },
     'click .decrement':function () {
         var joueurChoisi = Session.get('joueurChoisi');
-        joueursListe.update(joueurChoisi, {$inc: {score:-1} });
+        Meteor.call('retraitPointJoueur', joueurChoisi);
     },
     'click .supprimer':function () {
         var joueurChoisi = Session.get('joueurChoisi');
-        joueursListe.remove(joueurChoisi);
+        Meteor.call('suppressionJoueurMethode', joueurChoisi);
     }
 });

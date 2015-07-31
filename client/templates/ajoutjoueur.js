@@ -1,12 +1,7 @@
 Template.ajoutJoueur.events({
-    'submit form': function () {
+    'submit form': function (event) {
         event.preventDefault();
-        var utilisateurActuelId = Meteor.userId();
         var joueurName = event.target.nomJoueur.value;
-        joueursListe.insert({
-            name: joueurName,
-            score: 0,
-            utilisateurId: utilisateurActuelId
-        });
+        Meteor.call('ajoutJoueurMethode', joueurName);
     }
 });
