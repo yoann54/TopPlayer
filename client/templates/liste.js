@@ -22,5 +22,9 @@ Template.liste.events({
     'click .decrement':function () {
         var joueurChoisi = Session.get('joueurChoisi');
         joueursListe.update(joueurChoisi, {$inc: {score:-1} });
+    },
+    'click .supprimer':function () {
+        var joueurChoisi = Session.get('joueurChoisi');
+        joueursListe.remove(joueurChoisi);
     }
 });
